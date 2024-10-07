@@ -5,8 +5,6 @@ import axios from 'axios';
 function App() {
   const [data, setData] = useState<string | unknown>();
 
-  
-
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get("http://localhost:3000");
@@ -21,7 +19,11 @@ function App() {
   return (
     <>
       <div>
-        {`Data is: ${data}`}
+        {/* {`Data is: ${data}`} */}
+        <ul id="messages"></ul>
+        <form id="form" action="">
+          <input id="input" autoComplete='off' /><button>Send</button>
+        </form>
       </div>
     </>
   )
